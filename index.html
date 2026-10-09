@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#0b1326","surface-tint":"#b6c4ff","outline-variant":"#444651","error-container":"#93000a","surface-container-low":"#131b2e","surface-variant":"#2d3449","on-primary":"#05297a","secondary":"#93ccff","tertiary-container":"#004a31","inverse-on-surface":"#283044","on-primary-container":"#90a8ff","on-primary-fixed-variant":"#264191","secondary-fixed":"#cce5ff","on-secondary-fixed-variant":"#004b73","secondary-fixed-dim":"#93ccff","surface-container":"#171f33","on-secondary-container":"#002c47","on-tertiary-fixed":"#002113","secondary-container":"#3198dc","tertiary":"#4edea3","surface-container-highest":"#2d3449","on-secondary":"#003351","on-tertiary":"#003824","primary-container":"#1e3a8a","outline":"#8f909d","on-tertiary-fixed-variant":"#005236","on-error-container":"#ffdad6","surface-bright":"#31394d","inverse-surface":"#dae2fd","on-tertiary-container":"#27c38a","primary-fixed":"#dce1ff","on-surface":"#dae2fd","on-background":"#dae2fd","error":"#ffb4ab","on-primary-fixed":"#00164e","on-surface-variant":"#c5c5d3","surface-dim":"#0b1326","tertiary-fixed-dim":"#4edea3","on-error":"#690005","on-secondary-fixed":"#001d31","inverse-primary":"#4059aa","primary":"#b6c4ff","tertiary-fixed":"#6ffbbe","surface-container-high":"#222a3d","surface-container-lowest":"#060e20","surface":"#0b1326","primary-fixed-dim":"#b6c4ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.25rem","margin":"1rem","space-xs":"0.25rem","space-xl":"1.75rem","space-md":"0.75rem","gutter-lg":"1.5rem","margin-lg":"2rem","gutter":"1rem","space-sm":"0.5rem"},fontFamily:{"metric-val":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"display-lg-mobile":["Inter"],"title-sm":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"]},fontSize:{"metric-val":["1.75rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"display-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"700"}],"title-sm":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["0.8125rem",{"lineHeight":"1.125rem","fontWeight":"500"}],"display-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.05em","fontWeight":"600"}]}}}}</script></head><body class="bg-background text-on-surface font-body-md text-body-md min-h-screen selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg px-space-md"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[20px]">scatter_plot</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface tracking-tight leading-none">StatLearn Studio</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">BankPredict Analytics</span></div></div><div class="h-px bg-surface-variant/40 mx-space-xs"></div><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase px-space-xs">Módulos Analíticos</span><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-headline-md"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-headline-md" data-path="resumen-ejecutivo" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-label-md text-label-md">Resumen Ejecutivo</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="explorador-de-variables" href="#"><span class="material-symbols-outlined text-[18px]">view_column</span><span class="font-label-md text-label-md">Explorador de Variables</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="matriz-de-datos-csv" href="#"><span class="material-symbols-outlined text-[18px]">table_chart</span><span class="font-label-md text-label-md">Matriz de Datos CSV</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="frontera-de-clasificacion" href="#"><span class="material-symbols-outlined text-[18px]">grain</span><span class="font-label-md text-label-md">Frontera de Clasificación</span></a></nav></div><div class="flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase px-space-xs">Parámetros F-test</span><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Scoring</span><span class="font-label-sm text-label-sm text-secondary font-medium">f_classif</span></div><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Selección (k)</span><span class="font-label-sm text-label-sm text-tertiary font-medium">2 / 21</span></div><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Significancia α</span><span class="font-label-sm text-label-sm text-on-surface font-medium">0.01</span></div></div></div></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Engine Runtimes</span></div><span class="font-label-sm text-label-sm text-outline">v1.4.2</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter-lg flex flex-col justify-center gap-1"><div class="flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface tracking-tight">Reducción de Dimensionalidad (SelectKBest & ANOVA F-value)</span></div><div class="hidden xl:flex items-center gap-space-xs"><div class="px-2 py-0.5 rounded-lg bg-surface-container-high text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">database</span><span class="font-label-sm text-label-sm">Dataset: Bank Marketing (Reducido a k=2)</span></div><div class="px-2 py-0.5 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">verified</span><span class="font-label-sm text-label-sm">F-test ANOVA: Activo</span></div></div></div><div class="flex items-center gap-space-sm"><div class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[14px] text-tertiary">compress</span><span>21 variables → 2 variables</span></div><a class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-variant hover:text-on-surface transition-colors flex items-center gap-1 font-label-md text-label-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="documentacion-modelo" href="#"><span class="material-symbols-outlined text-[16px]">menu_book</span><span>Documentación Modelo</span></a><button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1 font-label-md text-label-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]" type="button"><span class="material-symbols-outlined text-[16px]">download</span><span>Exportar Resultados</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between"><nav class="flex items-center gap-space-lg" data-active-classes="text-primary font-title-sm border-b-2 border-primary"><a aria-current="page" class="py-1 transition-colors text-primary font-title-sm border-b-2 border-primary" data-path="resumen-ejecutivo" href="#">Resumen Ejecutivo</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="explorador-de-variables" href="#">Explorador de Variables</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="matriz-de-datos-csv" href="#">Matriz de Datos CSV</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface py-1 transition-colors" data-path="frontera-de-clasificacion" href="#">Frontera de Clasificación</a></nav><div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">analytics</span><span>Evaluación de Hipótesis F • p-value < 0.001</span></div></div></div></header><main class="w-full pt-20 px-gutter-lg pb-margin-lg bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Analytical Banner & Meta Status -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Reporte Técnico • Selección de Variables Supervisada</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Resumen Ejecutivo: Optimización de Dimensionalidad en Bank Marketing
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Evaluación rigurosa de varianza inter-clase mediante <span class="text-tertiary font-medium">ANOVA F-test</span> con reducción de espacio vectorial manteniendo semántica pura de negocio.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<div class="px-3 py-1.5 rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Estado: Modelo Calibrado (k=2)</span>
+</div>
+<div class="px-3 py-1.5 rounded-lg bg-surface-container text-outline text-label-sm font-label-sm">
+        FDR Corregido (α=0.01)
+      </div>
+</div>
+</div>
+<!-- Key KPIs & Summary Blocks (Bento Style) -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-space-md mb-space-xl">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Espacio Original</span>
+<span class="material-symbols-outlined text-[16px]">grid_4x4</span>
+</div>
+<div class="my-space-xs">
+<span class="font-metric-val text-metric-val text-on-surface">21</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-1">variables</span>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span>Matriz dispersa 41,188 obs</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Variables Seleccionadas</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</div>
+<div class="my-space-xs">
+<span class="font-metric-val text-metric-val text-secondary">k = 2</span>
+</div>
+<div class="text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+<span>Reducción neta del 90.5%</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Prueba Estadística</span>
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+</div>
+<div class="my-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">ANOVA F-val</span>
+</div>
+<div class="text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Supervisada (vs objetivo 'y')</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Muestra Analizada</span>
+<span class="material-symbols-outlined text-[16px]">dataset</span>
+</div>
+<div class="my-space-xs">
+<span class="font-metric-val text-metric-val text-on-surface">41,188</span>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">
+<span>100% registros CSV procesados</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-tertiary-container/30 flex flex-col justify-between col-span-2 md:col-span-1">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Interpretabilidad</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</div>
+<div class="my-space-xs">
+<span class="font-metric-val text-metric-val text-tertiary">100%</span>
+</div>
+<div class="text-on-tertiary-container font-label-sm text-label-sm">
+<span>Preservada (vs 0% en PCA)</span>
+</div>
+</div>
+</div>
+<!-- Mandatory Scientific & Business Explanation Statement -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-lg mb-space-xl shadow-md">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Fundamentación Metodológica y Justificación de Negocio</span>
+</div>
+<div class="space-y-space-sm text-on-surface">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+          Para optimizar el modelo de clasificación y superar los problemas de la alta dimensionalidad, se aplicó la técnica supervisada <span class="text-secondary font-medium">SelectKBest</span> apoyada en la prueba estadística <span class="text-tertiary font-medium">ANOVA F-value</span>. A diferencia de otros métodos que combinan variables y pierden su significado original (como PCA o LDA), SelectKBest evalúa la relación individual entre cada variable predictora y la variable de respuesta (<code class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary">y</code>), filtrando únicamente aquellas que aportan la mayor información estadística útil.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          A través de este análisis, el dataset original de 21 variables se redujo a 2 características predictoras clave manteniendo la interpretabilidad del negocio:
+        </p>
+</div>
+<!-- Impact & Conclusion Callout inside container -->
+<div class="p-space-md rounded-lg bg-surface-container-high/60 flex items-start gap-space-sm mt-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">verified_user</span>
+<div class="flex flex-col gap-1">
+<span class="font-title-sm text-title-sm text-on-surface">Impacto Técnico y de Eficiencia</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Esta reducción no solo elimina el ruido y evita el sobreajuste (overfitting) en los algoritmos de aprendizaje automático, sino que también permite simplificar el procesamiento computacional y visualizar las fronteras de clasificación de forma intuitiva.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- The Two Core Selected Features Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg mb-space-xl">
+<!-- Feature 1: duration -->
+<div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold tracking-wide">
+              VARIABLE 01 (MICRO)
+            </span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold font-mono">duration</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> F-Score #1
+          </span>
+</div>
+<div class="font-title-sm text-title-sm text-secondary font-medium">
+          Duración del contacto telefónico (segundos)
+        </div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Mide la interacción directa con el cliente, siendo el indicador individual de mayor relevancia en la decisión de compra.
+        </p>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline block">ANOVA F-Score</span>
+<span class="font-title-sm text-title-sm text-on-surface font-mono font-semibold">2,118.4</span>
+<span class="text-tertiary font-label-sm text-label-sm block mt-0.5">p-val < 1e-300</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline block">Rango & Media</span>
+<span class="font-title-sm text-title-sm text-on-surface font-mono">μ ≈ 258.3s</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm block mt-0.5">[0s - 4,918s]</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline block">Tasa Éxito (>500s)</span>
+<span class="font-title-sm text-title-sm text-tertiary font-mono">61.4%</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm block mt-0.5">vs 6.2% (<200s)</span>
+</div>
+</div>
+<!-- Inline Visual Sparkline Distribution -->
+<div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-high/40 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Distribución de conversión por cuartiles de llamada</span>
+<span class="text-tertiary font-mono">Correlación positiva robusta</span>
+</div>
+<div class="w-full flex items-center gap-1 h-3">
+<div class="h-full rounded-sm bg-outline-variant/50 w-1/4" title="Q1 (0-102s): 1.8% conversión"></div>
+<div class="h-full rounded-sm bg-primary/40 w-1/4" title="Q2 (103-180s): 5.3% conversión"></div>
+<div class="h-full rounded-sm bg-secondary-container w-1/4" title="Q3 (181-319s): 12.7% conversión"></div>
+<div class="h-full rounded-sm bg-tertiary w-1/4" title="Q4 (320-4918s): 42.1% conversión"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>< 100 seg</span>
+<span>200 - 350 seg</span>
+<span>> 500 seg (Alta probabilidad)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check</span>
+<span>Los contactos más largos correlacionan fuertemente con la aceptación (<code class="text-tertiary">y = 'yes'</code>).</span>
+</div>
+</div>
+<!-- Feature 2: nr.employed -->
+<div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold tracking-wide">
+              VARIABLE 02 (MACRO)
+            </span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold font-mono">nr.employed</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">hub</span> F-Score #2
+          </span>
+</div>
+<div class="font-title-sm text-title-sm text-secondary font-medium">
+          Número de empleados / Entorno laboral (Trimestral)
+        </div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Sintetiza las condiciones macroeconómicas y del mercado sin necesidad de incluir variables financieras redundantes.
+        </p>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline block">ANOVA F-Score</span>
+<span class="font-title-sm text-title-sm text-on-surface font-mono font-semibold">1,894.2</span>
+<span class="text-tertiary font-label-sm text-label-sm block mt-0.5">p-val < 1e-280</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline block">Rango de Valores</span>
+<span class="font-title-sm text-title-sm text-on-surface font-mono">5017.5 - 5228.1</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm block mt-0.5">Escala trimestral</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline block">Correlación 'y'</span>
+<span class="font-title-sm text-title-sm text-secondary font-mono">-0.354</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm block mt-0.5">Inversa robusta</span>
+</div>
+</div>
+<!-- Macro Levels Badges -->
+<div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-high/40 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Puntos de corte macroeconómicos observados en el CSV:</span>
+<span class="text-secondary font-mono">Liquidez y coyuntura</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono font-label-sm text-label-sm">5228.1 (Pico)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono font-label-sm text-label-sm">5195.8</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono font-label-sm text-label-sm">5191.0</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono font-label-sm text-label-sm">5099.1</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono font-label-sm text-label-sm">5076.2</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container/30 text-secondary font-mono font-label-sm text-label-sm">5017.5 (Bajo empleo = ↑ Depósitos)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">info</span>
+<span>Reemplaza con éxito a euribor3m y emp.var.rate sin colinealidad dañina.</span>
+</div>
+</div>
+</div>
+<!-- 2D Interactive Scatter Simulation & Decision Frontier View -->
+<div class="rounded-xl bg-surface-container p-space-lg mb-space-xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Visualización 2D del Espacio Reducido</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+          Plano de Clasificación: <span class="text-primary font-mono">duration</span> vs <span class="text-secondary font-mono">nr.employed</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          La reducción a k=2 habilita la inspección visual inmediata de la frontera de decisión separable.
+        </p>
+</div>
+<div class="flex items-center flex-wrap gap-2">
+<!-- Interactive Category Toggle -->
+<div class="flex items-center rounded-lg bg-surface-container-high p-1">
+<button class="px-2.5 py-1 rounded text-label-sm font-label-sm bg-primary-container text-on-primary-container font-medium transition-colors" id="btn-filter-all">Todos (k=2)</button>
+<button class="px-2.5 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1" id="btn-filter-yes">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> y = 'yes'
+          </button>
+<button class="px-2.5 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1" id="btn-filter-no">
+<span class="w-2 h-2 rounded-full bg-outline"></span> y = 'no'
+          </button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface text-label-sm font-label-sm flex items-center gap-1.5 transition-colors" id="btn-toggle-boundary">
+<span class="material-symbols-outlined text-[16px] text-tertiary">polyline</span>
+<span>Mostrar Frontera Teórica</span>
+</button>
+</div>
+</div>
+<!-- Chart Canvas Container -->
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-space-md items-stretch">
+<div class="xl:col-span-3 bg-surface-container-lowest rounded-xl p-space-md relative min-h-[360px] flex flex-col justify-between overflow-hidden">
+<!-- Y-Axis Label -->
+<div class="absolute left-3 top-3 text-label-sm font-label-sm text-secondary font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          nr.employed (empleados)
+        </div>
+<!-- X-Axis Label -->
+<div class="absolute right-3 bottom-2 text-label-sm font-label-sm text-primary font-mono flex items-center gap-1">
+          duration (segundos de contacto)
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+<!-- Synthetic High-Precision Data Plot Graphic -->
+<svg class="w-full h-80 my-auto overflow-visible select-none" id="scatter-canvas" viewbox="0 0 800 360">
+<!-- Background Grid Lines -->
+<defs>
+<lineargradient id="boundaryGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#3198dc" stop-opacity="0.05"></stop>
+</lineargradient>
+<lineargradient id="probZoneGradient" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.2"></stop>
+</lineargradient>
+</defs>
+<!-- Grid H -->
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="50" x2="770" y1="50" y2="50"></line>
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="50" x2="770" y1="120" y2="120"></line>
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="50" x2="770" y1="190" y2="190"></line>
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="50" x2="770" y1="260" y2="260"></line>
+<line opacity="0.8" stroke="#444651" x1="50" x2="770" y1="330" y2="330"></line>
+<!-- Grid V -->
+<line opacity="0.8" stroke="#444651" x1="50" x2="50" y1="30" y2="330"></line>
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="230" x2="230" y1="30" y2="330"></line>
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="410" x2="410" y1="30" y2="330"></line>
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="590" x2="590" y1="30" y2="330"></line>
+<line opacity="0.6" stroke="#2d3449" stroke-dasharray="3 3" x1="770" x2="770" y1="30" y2="330"></line>
+<!-- Axis Values Markers -->
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="end" x="44" y="55">5228</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="end" x="44" y="125">5175</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="end" x="44" y="195">5120</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="end" x="44" y="265">5065</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="end" x="44" y="335">5017</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="middle" x="50" y="348">0s</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="middle" x="230" y="348">250s</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="middle" x="410" y="348">500s</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="middle" x="590" y="348">900s</text>
+<text fill="#8f909d" font-family="Inter" font-size="10" text-anchor="middle" x="770" y="348">1800s+</text>
+<!-- Shaded Probable Acceptance Frontier Region -->
+<path class="transition-opacity duration-300 opacity-90" d="M 50,330 L 150,330 L 450,220 L 770,120 L 770,330 Z" fill="url(#probZoneGradient)" id="frontier-polygon"></path>
+<!-- Frontier Curve (Logit / Non-linear separation line) -->
+<path class="transition-all duration-300" d="M 110,330 Q 380,240 770,110" fill="none" id="frontier-line" stroke="#4edea3" stroke-dasharray="6 4" stroke-width="2.5"></path>
+<!-- Label on Frontier -->
+<text fill="#4edea3" font-family="Inter" font-size="11" font-weight="600" transform="rotate(-18 460 195)" x="460" y="195">Frontera p(y='yes') ≥ 0.50</text>
+<!-- Group: Class 'no' points (Gris/Azul tenue) -->
+<g class="transition-opacity duration-200" id="scatter-class-no">
+<!-- Clusters around high employment (5228), low duration (< 250s) -->
+<circle cx="85" cy="65" fill="#444651" opacity="0.75" r="3.5"></circle>
+<circle cx="110" cy="55" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="95" cy="80" fill="#444651" opacity="0.85" r="3.5"></circle>
+<circle cx="140" cy="70" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="170" cy="60" fill="#444651" opacity="0.9" r="4"></circle>
+<circle cx="195" cy="78" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="120" cy="95" fill="#444651" opacity="0.75" r="3"></circle>
+<circle cx="160" cy="110" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="105" cy="130" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="210" cy="90" fill="#444651" opacity="0.75" r="3"></circle>
+<circle cx="130" cy="145" fill="#444651" opacity="0.85" r="3.5"></circle>
+<circle cx="175" cy="135" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="250" cy="75" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="280" cy="85" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="70" cy="180" fill="#444651" opacity="0.75" r="3.5"></circle>
+<circle cx="95" cy="210" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="125" cy="225" fill="#444651" opacity="0.75" r="3.5"></circle>
+<circle cx="150" cy="200" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="220" cy="175" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="270" cy="150" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="320" cy="95" fill="#444651" opacity="0.75" r="3.5"></circle>
+<circle cx="350" cy="80" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="110" cy="280" fill="#444651" opacity="0.75" r="3.5"></circle>
+<circle cx="140" cy="295" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="190" cy="250" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="240" cy="220" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="300" cy="180" fill="#444651" opacity="0.85" r="3.5"></circle>
+<circle cx="370" cy="140" fill="#444651" opacity="0.75" r="3"></circle>
+<circle cx="420" cy="85" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="450" cy="70" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="215" cy="310" fill="#444651" opacity="0.75" r="3.5"></circle>
+<circle cx="290" cy="265" fill="#444651" opacity="0.8" r="3"></circle>
+<circle cx="360" cy="210" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="430" cy="165" fill="#444651" opacity="0.8" r="3.5"></circle>
+<circle cx="480" cy="115" fill="#444651" opacity="0.75" r="3"></circle>
+</g>
+<!-- Group: Class 'yes' points (Esmeralda/Cian brillante) -->
+<g class="transition-opacity duration-200" id="scatter-class-yes">
+<!-- Points with high duration OR low employment -->
+<circle class="shadow-sm" cx="390" cy="310" fill="#4edea3" opacity="0.95" r="4.5"></circle>
+<circle cx="440" cy="290" fill="#4edea3" opacity="0.95" r="4.5"></circle>
+<circle cx="480" cy="260" fill="#4edea3" opacity="0.9" r="4.5"></circle>
+<circle cx="530" cy="240" fill="#3198dc" opacity="0.95" r="5"></circle>
+<circle cx="560" cy="210" fill="#4edea3" opacity="0.9" r="4.5"></circle>
+<circle cx="610" cy="190" fill="#4edea3" opacity="0.95" r="5"></circle>
+<circle cx="650" cy="160" fill="#3198dc" opacity="0.95" r="4.5"></circle>
+<circle cx="690" cy="140" fill="#4edea3" opacity="0.95" r="5"></circle>
+<circle cx="730" cy="120" fill="#4edea3" opacity="0.9" r="5"></circle>
+<circle cx="750" cy="85" fill="#3198dc" opacity="0.95" r="5"></circle>
+<circle cx="210" cy="325" fill="#4edea3" opacity="0.9" r="4.5"></circle>
+<circle cx="260" cy="320" fill="#3198dc" opacity="0.9" r="4.5"></circle>
+<circle cx="310" cy="315" fill="#4edea3" opacity="0.95" r="5"></circle>
+<circle cx="340" cy="280" fill="#4edea3" opacity="0.9" r="4.5"></circle>
+<circle cx="490" cy="305" fill="#4edea3" opacity="0.95" r="5"></circle>
+<circle cx="570" cy="275" fill="#3198dc" opacity="0.95" r="4.5"></circle>
+<circle cx="630" cy="230" fill="#4edea3" opacity="0.95" r="5"></circle>
+<circle cx="680" cy="195" fill="#4edea3" opacity="0.9" r="4.5"></circle>
+<circle cx="720" cy="165" fill="#3198dc" opacity="0.95" r="5"></circle>
+<circle cx="600" cy="145" fill="#4edea3" opacity="0.9" r="4.5"></circle>
+<circle cx="510" cy="170" fill="#4edea3" opacity="0.85" r="4.5"></circle>
+<circle cx="420" cy="250" fill="#4edea3" opacity="0.9" r="4.5"></circle>
+</g>
+</svg>
+<div class="flex items-center justify-between pt-space-xs text-outline font-label-sm text-label-sm border-t border-surface-variant/30">
+<span>* Simulación representativa de densidades de densidad de Poisson/Gaussiana</span>
+<span class="text-on-surface font-mono">Región favorable: duration > 380s ∧ nr.employed ≤ 5099</span>
+</div>
+</div>
+<!-- Right Diagnostic Sidebar -->
+<div class="flex flex-col justify-between gap-space-sm bg-surface-container-low rounded-xl p-space-md">
+<div class="flex flex-col gap-space-sm">
+<span class="font-title-sm text-title-sm text-on-surface">Diagnóstico de Separabilidad</span>
+<div class="flex flex-col gap-2">
+<div class="p-space-xs rounded bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> Clase y = 'yes'
+                </span>
+<span class="font-mono text-tertiary">4,640 casos</span>
+</div>
+<div class="text-outline text-label-sm font-label-sm flex justify-between">
+<span>μ(dur): 553s</span>
+<span>μ(emp): 5,095</span>
+</div>
+</div>
+<div class="p-space-xs rounded bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span> Clase y = 'no'
+                </span>
+<span class="font-mono text-on-surface-variant">36,548 casos</span>
+</div>
+<div class="text-outline text-label-sm font-label-sm flex justify-between">
+<span>μ(dur): 221s</span>
+<span>μ(emp): 5,176</span>
+</div>
+</div>
+</div>
+<div class="space-y-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Métricas de Proyección 2D</span>
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Fisher Discriminant Ratio:</span>
+<span class="font-mono text-on-surface">1.84 (Muy Alto)</span>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Overlap de Clases (Overlap %):</span>
+<span class="font-mono text-secondary">21.8%</span>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">AUC 2D (Benchmark Logistic):</span>
+<span class="font-mono text-tertiary">0.824</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">lightbulb</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">
+            2 dimensiones permiten auditar predicciones en segundos por oficiales de riesgo.
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real Data Table Section -->
+<div class="rounded-xl bg-surface-container-low p-space-lg mb-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">table_rows</span>
+<span>Muestra Real Extraída del Dataset</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">
+          Matriz de Observaciones en Espacio Reducido (k=2)
+        </h3>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Interactive Search -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[16px] text-outline">search</span>
+<input class="pl-8 pr-3 py-1.5 rounded-lg bg-surface-container text-on-surface placeholder:text-outline text-label-md font-label-md focus:outline-none focus:ring-1 focus:ring-secondary w-64 transition-all" id="table-search" placeholder="Buscar por duración o empleado..." type="text"/>
+</div>
+<!-- Filter Select -->
+<select class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-label-md font-label-md focus:outline-none focus:ring-1 focus:ring-secondary" id="table-filter-status">
+<option value="all">Estado: Todos</option>
+<option value="yes">y = yes (Suscrito)</option>
+<option value="no">y = no (No suscrito)</option>
+</select>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-outline font-label-sm text-label-sm uppercase tracking-wider border-b border-surface-variant/40">
+<th class="py-2.5 px-space-md">ID Registro</th>
+<th class="py-2.5 px-space-md">duration (seg)</th>
+<th class="py-2.5 px-space-md">Categoría de Duración</th>
+<th class="py-2.5 px-space-md">nr.employed (empleados)</th>
+<th class="py-2.5 px-space-md">Prob. Estimada P(y='yes')</th>
+<th class="py-2.5 px-space-md text-center">y (suscrito)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant/20 font-body-sm text-body-sm text-on-surface" id="csv-table-body">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/60 transition-colors" data-label="no">
+<td class="py-2.5 px-space-md font-mono text-outline">#00142</td>
+<td class="py-2.5 px-space-md font-mono font-medium text-on-surface">151 s</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm">Corta (< 200s)</span>
+</td>
+<td class="py-2.5 px-space-md font-mono text-secondary">5191.0</td>
+<td class="py-2.5 px-space-md font-mono text-outline">0.048</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-error-container/40 text-error font-label-sm text-label-sm font-medium">no</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container/60 transition-colors" data-label="yes">
+<td class="py-2.5 px-space-md font-mono text-outline">#00289</td>
+<td class="py-2.5 px-space-md font-mono font-medium text-tertiary">1,042 s</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/40 text-tertiary font-label-sm text-label-sm">Muy Larga (> 800s)</span>
+</td>
+<td class="py-2.5 px-space-md font-mono text-secondary">5076.2</td>
+<td class="py-2.5 px-space-md font-mono text-tertiary font-semibold">0.892</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">yes</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container/60 transition-colors" data-label="no">
+<td class="py-2.5 px-space-md font-mono text-outline">#00712</td>
+<td class="py-2.5 px-space-md font-mono font-medium text-on-surface">68 s</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm">Mínima (< 100s)</span>
+</td>
+<td class="py-2.5 px-space-md font-mono text-secondary">5228.1</td>
+<td class="py-2.5 px-space-md font-mono text-outline">0.012</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-error-container/40 text-error font-label-sm text-label-sm font-medium">no</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/60 transition-colors" data-label="yes">
+<td class="py-2.5 px-space-md font-mono text-outline">#01044</td>
+<td class="py-2.5 px-space-md font-mono font-medium text-tertiary">639 s</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-primary-container/40 text-secondary font-label-sm text-label-sm">Media-Alta (500-800s)</span>
+</td>
+<td class="py-2.5 px-space-md font-mono text-secondary">5017.5</td>
+<td class="py-2.5 px-space-md font-mono text-tertiary font-semibold">0.765</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">yes</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container/60 transition-colors" data-label="no">
+<td class="py-2.5 px-space-md font-mono text-outline">#01208</td>
+<td class="py-2.5 px-space-md font-mono font-medium text-on-surface">246 s</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm">Promedio (~250s)</span>
+</td>
+<td class="py-2.5 px-space-md font-mono text-secondary">5195.8</td>
+<td class="py-2.5 px-space-md font-mono text-outline">0.118</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-error-container/40 text-error font-label-sm text-label-sm font-medium">no</span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container/60 transition-colors" data-label="yes">
+<td class="py-2.5 px-space-md font-mono text-outline">#02490</td>
+<td class="py-2.5 px-space-md font-mono font-medium text-tertiary">482 s</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded bg-primary-container/40 text-secondary font-label-sm text-label-sm">Media-Alta (300-500s)</span>
+</td>
+<td class="py-2.5 px-space-md font-mono text-secondary">5099.1</td>
+<td class="py-2.5 px-space-md font-mono text-tertiary font-semibold">0.621</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">yes</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Stats Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span>Mostrando 6 de 41,188 observaciones</span>
+<span class="text-surface-variant">•</span>
+<span class="text-on-surface-variant">ANOVA F-val rank validado</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="">Anterior</button>
+<span class="px-2 text-on-surface font-mono">1 / 6,865</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Siguiente</button>
+</div>
+</div>
+</div>
+<!-- Comparative Methodological Analysis: SelectKBest vs PCA / LDA / t-SNE -->
+<div class="rounded-xl bg-surface-container p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">balance</span>
+<span>Evaluación de Arquitectura de Reducción</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">
+        SelectKBest (ANOVA) frente a Métodos No Supervisados (PCA / LDA / t-SNE)
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl">
+        Por qué se prefirió SelectKBest: mantiene las unidades originales en segundos y empleados, sin rotación de componentes incomprensibles para la toma de decisiones gerencial y el cumplimiento regulatorio.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pt-space-xs">
+<!-- Card 1: SelectKBest (Selected) -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-tertiary font-semibold">SelectKBest (F-test)</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/20 text-tertiary text-label-sm font-label-sm font-semibold">Elegido</span>
+</div>
+<div class="space-y-2 mt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Naturaleza:</span>
+<span class="text-on-surface font-label-md text-label-md">Supervisada (Univariante)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Unidades Físicas:</span>
+<span class="text-tertiary font-label-md text-label-md font-medium">100% Intactas (Segundos, Personas)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Auditabilidad Bancaria:</span>
+<span class="text-on-surface font-label-md text-label-md">Totalmente auditable ante auditoría</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Interpretabilidad comercial intacta</span>
+</div>
+</div>
+<!-- Card 2: PCA -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">PCA (Componentes)</span>
+<span class="px-1.5 py-0.5 rounded bg-outline-variant/30 text-outline text-label-sm font-label-sm">No Supervisado</span>
+</div>
+<div class="space-y-2 mt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Naturaleza:</span>
+<span class="text-on-surface font-label-md text-label-md">Rotación de Ejes Ortonormales</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Unidades Físicas:</span>
+<span class="text-error font-label-md text-label-md">Destruidas (Combinación lineal PC1, PC2)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Deficiencia:</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Imposible explicar a asesores telefónicos</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-error font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Pérdida semántica total</span>
+</div>
+</div>
+<!-- Card 3: LDA -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">LDA (Discriminante)</span>
+<span class="px-1.5 py-0.5 rounded bg-outline-variant/30 text-outline text-label-sm font-label-sm">Supervisado</span>
+</div>
+<div class="space-y-2 mt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Naturaleza:</span>
+<span class="text-on-surface font-label-md text-label-md">Maximización de separación inter-clase</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Unidades Físicas:</span>
+<span class="text-error font-label-md text-label-md">Proyecciones compuestas (LD1)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Supuesto:</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Asume matrices de covarianza iguales</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-outline font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">remove_circle</span>
+<span>Supuesto violado en Marketing</span>
+</div>
+</div>
+<!-- Card 4: t-SNE / UMAP -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">t-SNE / Manifold</span>
+<span class="px-1.5 py-0.5 rounded bg-outline-variant/30 text-outline text-label-sm font-label-sm">No Lineal</span>
+</div>
+<div class="space-y-2 mt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Naturaleza:</span>
+<span class="text-on-surface font-label-md text-label-md">Preservación de vecindades locales</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Unidades Físicas:</span>
+<span class="text-error font-label-md text-label-md">Dimensiones abstractas arbitrarias</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Cómputo en Inferencia:</span>
+<span class="text-on-surface-variant font-label-md text-label-md">No proyecta datos nuevos directamente</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-error font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Inviable para scoring en producción</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript -->
+<script>
+    (function initExecutiveDashboard() {
+      // Elements
+      const btnAll = document.getElementById('btn-filter-all');
+      const btnYes = document.getElementById('btn-filter-yes');
+      const btnNo = document.getElementById('btn-filter-no');
+      const btnBoundary = document.getElementById('btn-toggle-boundary');
+      
+      const groupYes = document.getElementById('scatter-class-yes');
+      const groupNo = document.getElementById('scatter-class-no');
+      const frontierPoly = document.getElementById('frontier-polygon');
+      const frontierLine = document.getElementById('frontier-line');
+
+      const tableSearch = document.getElementById('table-search');
+      const tableFilterStatus = document.getElementById('table-filter-status');
+      const tableRows = document.querySelectorAll('#csv-table-body tr');
+
+      // Scatter Plot Filter Functionality
+      function setActiveFilter(btn) {
+        [btnAll, btnYes, btnNo].forEach(b => {
+          b.className = 'px-2.5 py-1 rounded text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1';
+        });
+        btn.className = 'px-2.5 py-1 rounded text-label-sm font-label-sm bg-primary-container text-on-primary-container font-medium transition-colors flex items-center gap-1';
+      }
+
+      if (btnAll && btnYes && btnNo) {
+        btnAll.addEventListener('click', () => {
+          setActiveFilter(btnAll);
+          if (groupYes) groupYes.style.opacity = '1';
+          if (groupNo) groupNo.style.opacity = '1';
+        });
+
+        btnYes.addEventListener('click', () => {
+          setActiveFilter(btnYes);
+          if (groupYes) groupYes.style.opacity = '1';
+          if (groupNo) groupNo.style.opacity = '0.15';
+        });
+
+        btnNo.addEventListener('click', () => {
+          setActiveFilter(btnNo);
+          if (groupYes) groupYes.style.opacity = '0.15';
+          if (groupNo) groupNo.style.opacity = '1';
+        });
+      }
+
+      // Toggle Boundary Line
+      let boundaryVisible = true;
+      if (btnBoundary && frontierLine && frontierPoly) {
+        btnBoundary.addEventListener('click', () => {
+          boundaryVisible = !boundaryVisible;
+          frontierLine.style.opacity = boundaryVisible ? '1' : '0';
+          frontierPoly.style.opacity = boundaryVisible ? '0.9' : '0';
+          btnBoundary.classList.toggle('bg-primary-container', boundaryVisible);
+        });
+      }
+
+      // Real Table Filtering & Searching
+      function filterTable() {
+        const query = (tableSearch ? tableSearch.value.toLowerCase().trim() : '');
+        const status = (tableFilterStatus ? tableFilterStatus.value : 'all');
+
+        tableRows.forEach(row => {
+          const rowText = row.textContent.toLowerCase();
+          const rowStatus = row.getAttribute('data-label');
+          const matchesQuery = query === '' || rowText.includes(query);
+          const matchesStatus = status === 'all' || rowStatus === status;
+
+          if (matchesQuery && matchesStatus) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      }
+
+      if (tableSearch) tableSearch.addEventListener('input', filterTable);
+      if (tableFilterStatus) tableFilterStatus.addEventListener('change', filterTable);
+    })();
+  </script>
+</div></main></div></body></html>
